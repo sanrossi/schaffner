@@ -3,7 +3,7 @@ const FormAutoFill = new Vue({
   data: {
 
     // Google Apps Script 部署為網路應用程式後的 URL
-    gas: 'https://script.google.com/macros/s/AKfycbwyY7oLpoZ4lbcIwIWniLZ8U_pY8e7YBK9fakeszgR_77S2u1SV/exec',
+    gas: 'https://script.google.com/macros/s/AKfycbwr_0fM0B5p_pi9wr7ST9G5_04DlE5YOGeOAx6IOqI-7NM8eShkyT9ZT7zFGqoJrTV4/exec',
 
     id: '',
 
@@ -14,16 +14,15 @@ const FormAutoFill = new Vue({
     person: {},
 
     // Google Form 的 action URL
-    formAction: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeNBnd-yVJ7_-tMq5xaQrvt0j18UtabCFBTM0Eu2O3ivDecuQ/formResponse',
-    
+    formAction: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSe8RwmqCwX7e8K61i4bnmd1X01XQ5Dbygj40eEsflk3HoEcfg/formResponse',
+
     // Google Form 各個 input 的 name
     input: {
-      id: 'entry.1815052017',
-      name: 'entry.1543576845',
-      gender: 'entry.892230025',
-      phone: 'entry.1003128242',
-      site: 'entry.260985931',
-      msg: 'entry.1782841550'
+      phone: 'entry.1345166848',
+      name: 'entry.394656167',
+      company: 'entry.664737046',
+      taxID: 'entry.1826921604',
+
     },
 
     // loading 效果要不要顯示
@@ -32,8 +31,8 @@ const FormAutoFill = new Vue({
   methods: {
     // ID 限填 4 碼
     limitIdLen(val) {
-      if(val.length > 4) {
-        return this.id =  this.id.slice(0, 4);
+      if(val.length > 10) {
+        return this.id =  this.id.slice(0, 10);
       }
     },
     // 送出表單
