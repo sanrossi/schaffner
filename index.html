@@ -52,7 +52,7 @@
       </div>
       <div class="form-group">
         <label for="main_id">請輸輸入您的手機號碼</label>
-        <input class="form-control" id="main_id" type="number" v-model="id" @input="limitIdLen(id)">
+        <input class="form-control" id="main_id" type="tel" v-model="phone" @input="limitIdLen(phone)">
       </div>
       <div class="two-col">
         <div class="col">
@@ -65,21 +65,20 @@
         </div>
         <div class="col">
           <div class="form-group">
-            <label for="phone">公司</label>
-            <input class="form-control" id="phone" type="tel" v-model="person.phone" disabled="disabled">
+            <label for="company">公司</label>
+            <input class="form-control" id="company" type="text" v-model="person.company" disabled="disabled">
           </div>
         </div>
       </div>
       <div class="form-group">
-        <label for="site">統編</label>
-        <input class="form-control" id="site" type="text" v-model="person.site" disabled="disabled">
+        <label for="taxID">統編</label>
+        <input class="form-control" id="taxID" type="text" v-model="person.taxID" disabled="disabled">
       </div>
       <div class="submit"><a href="#" :class="{ disabled: person.name == undefined }" @click.prevent="submit">簽到</a></div>
     </section>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
   <script src="dist/main.min.js"></script>
-  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
 </body>
 
 </html>
